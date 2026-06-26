@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "fallout-4-hud",
+	"version": "${version}",
+	"name": "Fallout 4 HUD",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/fallout-4-hud/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"fallout4hud.modid.Fallout4HUD"
+		],
+		"client": [
+			"fallout4hud.modid.client.Fallout4HUDClient"
+		]
+	},
+	"mixins": [
+		"fallout-4-hud.mixins.json",
+		{
+			"config": "fallout-4-hud.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
